@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para Brisa 🌷❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffb6d9, #ff6f91, #b8e986);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 650px;
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 10px auto;
+}
+
+button, .spotify {
+    border: none;
+    background: #fff;
+    color: #e83e6f;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15px 8px;
+    text-decoration: none;
+    transition: 0.25s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+button:hover, .spotify:hover {
+    transform: scale(1.08);
+}
+
+.foto {
+    width: min(85vw, 500px);
+    border-radius: 25px;
+    margin: 25px 0;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+.flores {
+    font-size: 45px;
+    margin: 20px;
+}
+
+.timeline {
+    max-width: 650px;
+    width: 100%;
+}
+
+.evento {
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.fecha {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cancion {
+    background: rgba(255,255,255,0.2);
+    padding: 25px;
+    border-radius: 25px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.mision {
+    font-size: 26px;
+    margin: 25px;
+}
+
+.mensaje-oculto {
+    display: none;
+    background: rgba(255,255,255,0.25);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+    max-width: 550px;
+}
+
+.flor {
+    position: fixed;
+    top: -50px;
+    animation: caer linear forwards;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes caer {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.contador {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.final {
+    background: linear-gradient(135deg, #e91e63, #8bc34a);
+}
+
+.final h1 {
+    font-size: 48px;
+}
+
+.pequeno {
+    font-size: 17px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- INICIO -->
+<section>
+
+    <div class="flores">🌷 🌹 🌷</div>
+
+    <h1>para vos, brisa ❤️</h1>
+
+    <p>
+        sé q estas cansada y no de humor tmp pero te dije siempre
+        q buscaria sacarte una sonrisa
+    </p>
+
+    <button onclick="entrar()">entrar 🌷</button>
+
+    <div class="flores">🌹 🌷 🌹</div>
+
+</section>
+
+
+<!-- FOTO -->
+<section>
+
+    <h2>así q hice esto para vos</h2>
+
+    <img src="foto.png" class="foto" alt="Brisa y yo">
+
+    <p>
+        no porque tenga q hacerlo, sino porque sos vos,
+        y porque aunque hoy estés de mal humor igual quiero
+        hacerte sonreír aunque sea un poquito
+    </p>
+
+    <button onclick="flores()">tocá las flores 🌷</button>
+
+    <div id="mensajeFlor" class="mensaje-oculto">
+        🌷 este tulipán es para vos
+    </div>
+
+</section>
+
+
+<!-- MENSAJES -->
+<section>
+
+    <h2>una cosa</h2>
+
+    <p>
+        sé q capaz hoy no es uno de esos días en los q tenés
+        ganas de nada, pero quería recordarte algo...
+    </p>
+
+    <button onclick="mensaje()">tocá acá</button>
+
+    <div id="mensaje" class="mensaje-oculto">
+        te amo, sos hermosa y espero poder sacarte aunque sea
+        una sonrisa de esas q tanto me gustan ❤️
+    </div>
+
+</section>
+
+
+<!-- HISTORIA -->
+<section>
+
+    <h2>nosotros 🫶</h2>
+
+    <div class="timeline">
+
+        <div class="evento">
+            <div class="fecha">27 de diciembre de 2024</div>
+            <p>
+                el día q nos conocimos.
+            </p>
+        </div>
+
+        <div class="evento">
+            <div class="fecha">1 de enero de 2025</div>
+            <p>
+                el día q me di cuenta de q me gustabas.
+            </p>
+        </div>
+
+        <div class="evento">
+            <div class="fecha">después...</div>
+            <p>
+                nos volvimos a encontrar y descubrimos q
+                nos habíamos extrañado los dos.
+            </p>
+        </div>
+
+    </div>
+
+    <p>
+        y miranos ahora ❤️
+    </p>
+
+</section>
+
+
+<!-- 11 Y 6 -->
+<section>
+
+    <h2>y esta no podía faltar 🎵</h2>
+
+    <div class="cancion">
+
+        <h2>11 y 6</h2>
+
+        <p>
+            Fito Páez
+        </p>
+
+        <p>
+            sé q es tu tema favorito, así q obviamente tenía
+            q estar acá. aparte cada vez q la escucho ya
+            automáticamente pienso un poquito en vos ❤️
+        </p>
+
+        <a
+            class="spotify"
+            href="https://open.spotify.com/search/11%20y%206%20Fito%20Paez"
+            target="_blank">
+            escucharla 🎧
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- PLAYLIST -->
+<section>
+
+    <h2>🎧</h2>
+
+    <p>
+        y ya sabés q hay un montón de canciones q me hacen
+        pensar en vos, por eso existe esa playlist q te hice.
+    </p>
+
+    <p class="pequeno">
+        esta parte no es para mostrártela como si fuera algo nuevo,
+        porque ya la conocés, simplemente tenía q estar acá también.
+    </p>
+
+    <a
+        class="spotify"
+        href="https://open.spotify.com/playlist/7Cgsfle9KLDWCUJnJIASBW"
+        target="_blank">
+        escuchar nuestra playlist ❤️
+    </a>
+
+    <div class="cancion">
+        <p>🎵 Puesto — Babasónicos</p>
+        <p>🎵 Entre dos universos — Tomás Metrik</p>
+    </div>
+
+</section>
+
+
+<!-- MISIÓN -->
+<section>
+
+    <h2>brisa, tengo una misión para vos</h2>
+
+    <div class="mision">
+        MISIÓN: sonreír aunque sea 5 segundos 😭
+    </div>
+
+    <button onclick="mision()">aceptar misión</button>
+
+    <div id="contador" class="contador"></div>
+
+    <div id="resultado" class="mensaje-oculto">
+        misión cumplida 😌
+        <br><br>
+        sabía q podía hacerte sonreír aunque sea un poquito
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+<section class="final">
+
+    <div class="flores">
+        🌹 🌷 🌹 🌷 🌹
+    </div>
+
+    <h1>t amo brisa denisse lara ❤️</h1>
+
+    <p>
+        sé q no puedo arreglar todos tus días malos,
+        pero siempre voy a intentar hacerlos un poquito
+        más lindos, aunque sea con una página llena
+        de flores y boludeces hecha para vos 😭
+    </p>
+
+    <button onclick="final()">una última cosa 🌹</button>
+
+    <div id="finalMensaje" class="mensaje-oculto">
+
+        te amo muchísimo,
+        y espero q hoy termine un poquito mejor de como empezó.
+
+        <br><br>
+
+        ahora sonreí, tontita ❤️
+
+    </div>
+
+    <div class="flores">
+        🌷 🌹 🌷 🌹 🌷
+    </div>
+
+</section>
+
+
+<script>
+
+function entrar() {
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+    });
+
+    flores();
+}
+
+function flores() {
+
+    const simbolos = ["🌷", "🌹", "❤️"];
+
+    for (let i = 0; i < 18; i++) {
+
+        const flor = document.createElement("div");
+
+        flor.classList.add("flor");
+
+        flor.innerText =
+            simbolos[Math.floor(Math.random() * simbolos.length)];
+
+        flor.style.left = Math.random() * 100 + "vw";
+
+        flor.style.fontSize =
+            (20 + Math.random() * 30) + "px";
+
+        flor.style.animationDuration =
+            (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(flor);
+
+        setTimeout(() => {
+            flor.remove();
+        }, 7000);
+    }
+
+    document.getElementById("mensajeFlor").style.display = "block";
+}
+
+function mensaje() {
+
+    document.getElementById("mensaje").style.display = "block";
+
+    flores();
+}
+
+function mision() {
+
+    let numero = 5;
+
+    const contador =
+        document.getElementById("contador");
+
+    contador.innerText = numero;
+
+    const intervalo = setInterval(() => {
+
+        numero--;
+
+        contador.innerText = numero;
+
+        if (numero <= 0) {
+
+            clearInterval(intervalo);
+
+            contador.innerText = "❤️";
+
+            document.getElementById("resultado")
+                .style.display = "block";
+
+            flores();
+        }
+
+    }, 1000);
+}
+
+function final() {
+
+    document.getElementById("finalMensaje")
+        .style.display = "block";
+
+    flores();
+}
+
+</script>
+
+</body>
+</html>
